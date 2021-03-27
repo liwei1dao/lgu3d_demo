@@ -1,9 +1,10 @@
 {
+    "window.zoomLevel": 1,
     "files.exclude":
     {
         "**/.DS_Store":true,
         "**/.git":true,
-        "**/.gitignore":true,
+        // "**/.gitignore":true,
         "**/.gitmodules":true,
         "**/*.booproj":true,
         "**/*.pidb":true,
