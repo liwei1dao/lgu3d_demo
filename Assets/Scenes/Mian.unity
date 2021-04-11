@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa490b14dc8644bb207b38c987657a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsShowLog: 0
+  IsShowLog: 1
   IsOpenVersionCheck: 0
   AppResModel: 1
 --- !u!4 &1716801850
