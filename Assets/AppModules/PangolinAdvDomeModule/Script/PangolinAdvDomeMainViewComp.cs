@@ -15,7 +15,7 @@ public class PangolinAdvDomeMainViewComp : Model_BaseViewComp<PangolinAdvDomeMod
     }
 
     private void ShowSplashAd (){
-        PangolinAdvModule.Instance.ShowSplashAd("801121974");
+        PangolinAdvModule.Instance.ShowSplashAd("801121648");
     }
 
     private void ShowInterstitialAd (){
