@@ -1,0 +1,3 @@
+[submodule ".\\lgu3d_demo\\Assets\\lgu3d"]
+	path = .\\lgu3d_demo\\Assets\\lgu3d
+	url = git@github.com:liwei1dao/lgu3d.git
