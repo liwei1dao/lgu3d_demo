@@ -1,5 +1,3 @@
-
-
 using System.Collections;
 using UnityEngine;
 using lgu3d;
@@ -14,6 +12,7 @@ public class Demo_HomeScene_Comp : Module_BaseSceneComp<DemoModule>
   public override void Load(ModelBase model, params object[] agrs)
   {
     base.Load(model, agrs);
+    LoadEnd();
   }
   public override string GetSceneName()
   {
@@ -29,6 +28,7 @@ public class Demo_HomeScene_Comp : Module_BaseSceneComp<DemoModule>
   public override IEnumerator LoadScene()
   {
     Process = 1;
+    MyModule.HomeView_Comp.Show();
     yield return 1;
   }
   public override IEnumerator UnloadScene()

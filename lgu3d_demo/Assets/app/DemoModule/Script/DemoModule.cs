@@ -5,19 +5,23 @@ using UnityEngine;
 
 public class DemoModule : ManagerContorBase<DemoModule>
 {
-  public IAdv adv;
-  private Demo_HomeView_Comp HomeView_Comp;
-  private Demo_HomeScene_Comp HomeScene_Comp;
-  private Demo_SceneChanageView_Comp SceneChanageView_Comp;
+  public Demo_HomeView_Comp HomeView_Comp;
+  public Demo_AdmobView_Comp AdmobView_Comp;
+  public Demo_VungleView_Comp VungleView_Comp;
+  public Demo_UnityView_Comp UnityView_Comp;
+  public Demo_HomeScene_Comp HomeScene_Comp;
+  public Demo_SceneChanageView_Comp SceneChanageView_Comp;
   public override void Load(params object[] agrs)
   {
-    adv = VungleAdvModule.Instance;
     ResourceComp = AddComp<Module_ResourceComp>();
     TimerComp = AddComp<Module_TimerComp>();
     CoroutineComp = AddComp<Module_CoroutineComp>();
     SoundComp = AddComp<Module_SoundComp>();
     HomeScene_Comp = AddComp<Demo_HomeScene_Comp>();
     HomeView_Comp = AddComp<Demo_HomeView_Comp>();
+    AdmobView_Comp = AddComp<Demo_AdmobView_Comp>();
+    VungleView_Comp = AddComp<Demo_VungleView_Comp>();
+    UnityView_Comp = AddComp<Demo_UnityView_Comp>();
     SceneChanageView_Comp = AddComp<Demo_SceneChanageView_Comp>();
     base.Load(agrs);
   }
