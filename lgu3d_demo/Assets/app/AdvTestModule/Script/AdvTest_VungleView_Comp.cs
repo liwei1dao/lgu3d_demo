@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Demo_VungleView_Comp : Model_BaseViewComp<DemoModule>
+public class AdvTest_VungleView_Comp : Model_BaseViewComp<AdvTestModule>
 {
   private Text text;
   private Button BannerAd_Show_butt;
@@ -35,38 +35,13 @@ public class Demo_VungleView_Comp : Model_BaseViewComp<DemoModule>
   public override void Start(params object[] agr)
   {
     base.Start(agr);
-    Manager_ManagerModel.Instance.StartModule<VungleAdvModule>((module) =>
-    {
-      module.logEvent = WriteLog;
-      WriteLog("Start VungleAdvModule!");
-      module.Initialize("5e15c0585ec4860017a38f46", true, (isucc) =>
-      {
-        WriteLog("Start VungleAdvModule:" + isucc.ToString());
-      });
-    }, new Dictionary<AdvType, string>()
-        {
-    #if UNITY_EDITOR || ADVTEST
-          { AdvType.AppOpenAd, ""},
-          { AdvType.BannerAd, "ADS004-8413128" },
-          { AdvType.IntersitialAd, "DEFAULT-5670107" },
-          { AdvType.Video_RewardedAd, "ADS02-3599132" },
-          { AdvType.IntersitialAd_RewardedAd, "" },
-    #elif UNITY_ANDROID
-          { AdvType.AppOpenAd, ""},
-          { AdvType.BannerAd, "ADS004-8413128" },
-          { AdvType.IntersitialAd, "DEFAULT-5670107" },
-          { AdvType.Video_RewardedAd, "ADS02-3599132" },
-          { AdvType.IntersitialAd_RewardedAd, "" },
-    #elif UNITY_IPHONE
-          { AdvType.AppOpenAd, ""},
-          { AdvType.BannerAd, "ADS004-8413128" },
-          { AdvType.IntersitialAd, "DEFAULT-5670107" },
-          { AdvType.Video_RewardedAd, "ADS02-3599132" },
-          { AdvType.IntersitialAd_RewardedAd, "" },
-    #endif
-    });
+    VungleAdvModule.Instance.logEvent = WriteLog;
   }
-
+  public override void Show()
+  {
+    base.Show();
+    updatebutt();
+  }
   private void BannerAd_Load()
   {
     WriteLog("BannerAd_Load Click!");

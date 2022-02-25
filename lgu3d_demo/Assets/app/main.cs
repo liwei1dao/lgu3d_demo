@@ -18,7 +18,7 @@ public class main : Main
         Manager_ManagerModel.Instance.StartModule<LanguageModule>(null, LanguageType.EN);
         Manager_ManagerModel.Instance.StartModule<SceneModule>();
         Manager_ManagerModel.Instance.StartModule<CommonModule>();
-        Manager_ManagerModel.Instance.StartModule<DemoModule>();
+        Manager_ManagerModel.Instance.StartModule<AdvTestModule>();
       }, new ResLoadViewComp());
     }, new Vector2(1080, 1920), 0f);
   }

@@ -6,7 +6,7 @@ using DG.Tweening;
 /// <summary>
 /// home 场景
 /// </summary>
-public class Demo_HomeScene_Comp : Module_BaseSceneComp<DemoModule>
+public class AdvTest_HomeScene_Comp : Module_BaseSceneComp<AdvTestModule>
 {
   private string sceneName;
   public override void Load(ModelBase model, params object[] agrs)

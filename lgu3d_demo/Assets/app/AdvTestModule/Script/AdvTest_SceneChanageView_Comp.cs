@@ -2,7 +2,7 @@
 using lgu3d;
 
 
-public class Demo_SceneChanageView_Comp : Model_BaseViewComp<DemoModule>, IScenesChedulerBase
+public class AdvTest_SceneChanageView_Comp : Model_BaseViewComp<AdvTestModule>, IScenesChedulerBase
 {
 
   public override void Load(ModelBase module, params object[] agrs)

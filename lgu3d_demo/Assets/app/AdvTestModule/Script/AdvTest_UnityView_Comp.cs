@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Demo_UnityView_Comp : Model_BaseViewComp<DemoModule>
+public class AdvTest_UnityView_Comp : Model_BaseViewComp<AdvTestModule>
 {
   private Text text;
   private Button BannerAd_Show_butt;
@@ -36,34 +36,13 @@ public class Demo_UnityView_Comp : Model_BaseViewComp<DemoModule>
   {
     base.Start(agr);
     WriteLog("Start UnityAdvModule!");
-    Manager_ManagerModel.Instance.StartModule<UnityAdsModule>((module) =>
-    {
-      module.Initialize("4628697", true, (isucc) =>
-       {
-         WriteLog("Start UnityAdvModule:" + isucc.ToString());
-       });
-    }, new Dictionary<AdvType, string>()
-        {
-    #if UNITY_EDITOR || ADVTEST
-          { AdvType.AppOpenAd, ""},
-          { AdvType.BannerAd, "Banner_Android" },
-          { AdvType.IntersitialAd, "Interstitial_Android" },
-          { AdvType.Video_RewardedAd, "Rewarded_Android" },
-          { AdvType.IntersitialAd_RewardedAd, "" },
-    #elif UNITY_ANDROID
-          { AdvType.AppOpenAd, ""},
-          { AdvType.BannerAd, "Banner_Android" },
-          { AdvType.IntersitialAd, "Interstitial_Android" },
-          { AdvType.Video_RewardedAd, "Rewarded_Android" },
-          { AdvType.IntersitialAd_RewardedAd, "" },
-    #elif UNITY_IPHONE
-          { AdvType.AppOpenAd, ""},
-          { AdvType.BannerAd, "Banner_Android" },
-          { AdvType.IntersitialAd, "Interstitial_Android" },
-          { AdvType.Video_RewardedAd, "Rewarded_Android" },
-          { AdvType.IntersitialAd_RewardedAd, "" },
-    #endif
-    });
+    UnityAdsModule.Instance.logEvent = WriteLog;
+  }
+
+  public override void Show()
+  {
+    base.Show();
+    updatebutt();
   }
 
   private void BannerAd_Load()
