@@ -17,7 +17,7 @@ public class AdvTest_AdvManager_Comp : Module_AdvManager_Comp<AdvTestModule>
       module.Initialize((isucc) =>
       {
         Debug.Log("Start AdmobModule:" + isucc.ToString());
-        advs.Add(AdmobModule.Instance);
+        AddAdv(AdmobModule.Instance);
       });
     }, new Dictionary<AdvType, string>()
         {
@@ -48,7 +48,7 @@ public class AdvTest_AdvManager_Comp : Module_AdvManager_Comp<AdvTestModule>
       module.Initialize("5e15c0585ec4860017a38f46", true, (isucc) =>
       {
         Debug.Log("Start VungleAdvModule:" + isucc.ToString());
-        advs.Add(VungleAdvModule.Instance);
+        AddAdv(VungleAdvModule.Instance);
       });
     }, new Dictionary<AdvType, string>()
         {
@@ -79,7 +79,7 @@ public class AdvTest_AdvManager_Comp : Module_AdvManager_Comp<AdvTestModule>
       module.Initialize("4628697", true, (isucc) =>
       {
         Debug.Log("Start UnityAdsModule:" + isucc.ToString());
-        advs.Add(UnityAdsModule.Instance);
+        AddAdv(UnityAdsModule.Instance);
       });
     }, new Dictionary<AdvType, string>()
         {

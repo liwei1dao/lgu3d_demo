@@ -44,64 +44,68 @@ public class AdvTest_VungleView_Comp : Model_BaseViewComp<AdvTestModule>
   }
   private void BannerAd_Load()
   {
-    WriteLog("BannerAd_Load Click!");
+    WriteLog("AdvTest_VungleView_Comp BannerAd_Load Click!");
     VungleAdvModule.Instance.BannerAd_Load(AdPosition.Bottom, (issucc) =>
      {
+       WriteLog("AdvTest_VungleView_Comp BannerAd_Load 加载回调" + issucc.ToString());
        updatebutt();
      });
   }
   private void BannerAd_Show()
   {
-    WriteLog("BannerAd_Show Click!");
+    WriteLog("AdvTest_VungleView_Comp BannerAd_Show Click!");
     VungleAdvModule.Instance.BannerAd_Show(AdPosition.Bottom);
   }
   private void BannerAd_Hide()
   {
-    WriteLog("BannerAd_Hide Click!");
+    WriteLog("AdvTest_VungleView_Comp BannerAd_Hide Click!");
     VungleAdvModule.Instance.BannerAd_Hide();
   }
   private void InterstitialAd_Load()
   {
-    WriteLog("InterstitialAd_Load Click!");
+    WriteLog("AdvTest_VungleView_Comp InterstitialAd_Load Click!");
     VungleAdvModule.Instance.Intersitial_Load((issucc) =>
     {
+      WriteLog("AdvTest_VungleView_Comp Intersitial_Load 加载回调" + issucc.ToString());
       updatebutt();
     });
   }
   private void InterstitialAd_Show()
   {
-    WriteLog("InterstitialAd_Show Click!");
+    WriteLog("AdvTest_VungleView_Comp InterstitialAd_Show Click!");
     VungleAdvModule.Instance.Intersitial_Show();
   }
   private void InterstitialAd_Hide()
   {
-    WriteLog("InterstitialAd_Hide Click!");
+    WriteLog("AdvTest_VungleView_Comp InterstitialAd_Hide Click!");
     VungleAdvModule.Instance.Intersitial_Hide();
   }
   private void RewardedAd_Load()
   {
-    WriteLog("RewardedAd_Load Click!");
+    WriteLog("AdvTest_VungleView_Comp RewardedAd_Load Click!");
     VungleAdvModule.Instance.Video_RewardedAd_Load((issucc) =>
     {
+      WriteLog("AdvTest_VungleView_Comp RewardedAd_Load  加载回调" + issucc.ToString());
       updatebutt();
     });
   }
   private void RewardedAd_Show()
   {
-    WriteLog("RewardedAd_Show Click!");
+    WriteLog("AdvTest_VungleView_Comp RewardedAd_Show Click!");
     VungleAdvModule.Instance.Video_RewardedAd_Show((issucc) =>
     {
-      Debug.Log("RewardedAd:" + issucc.ToString());
+      WriteLog("AdvTest_VungleView_Comp 奖励回调:" + issucc.ToString());
     });
   }
   private void RewardedAd_Hide()
   {
-    WriteLog("RewardedAd_Hide Click!");
+    WriteLog("AdvTest_VungleView_Comp RewardedAd_Hide Click!");
     VungleAdvModule.Instance.Video_RewardedAd_Hide();
   }
   private void WriteLog(string msg)
   {
     text.text += msg + "\n";
+    Debug.Log(msg);
 
   }
   private void updatebutt()
