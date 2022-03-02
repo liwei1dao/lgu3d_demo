@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 47e0c90dcb4dafc4987449afeacf40a9
+=======
 guid: 26fbac5bfc611e744bba705e1874f4f5
+>>>>>>> e982d60ae49866f1fe10afd5a965aa9ee7916a8c
 labels:
 - gpsr
 PluginImporter:
