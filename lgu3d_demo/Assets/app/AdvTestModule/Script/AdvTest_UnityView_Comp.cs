@@ -37,6 +37,8 @@ public class AdvTest_UnityView_Comp : Model_BaseViewComp<AdvTestModule>
     base.Start(agr);
     WriteLog("Start UnityAdvModule!");
     UnityAdsModule.Instance.logEvent = WriteLog;
+    UnityAdsModule.Instance.LoadEvent += AdvLoad;
+    UnityAdsModule.Instance.RewardEvent += AdvReward;
   }
 
   public override void Show()
@@ -45,14 +47,20 @@ public class AdvTest_UnityView_Comp : Model_BaseViewComp<AdvTestModule>
     updatebutt();
   }
 
+  private void AdvLoad(AdvType atype,bool isload){
+    WriteLog(string.Format("AdvTest_UnityView_Comp AdvLoad AdvType:{0} isload:{1}",atype.ToString(),isload.ToString()));
+    updatebutt();
+  }
+  private void AdvReward(AdvType atype,bool isload){
+    WriteLog(string.Format("AdvTest_UnityView_Comp AdvReward AdvType:{0} isload:{1}",atype.ToString(),isload.ToString()));
+    updatebutt();
+  }
+
+
   private void BannerAd_Load()
   {
     WriteLog("AdvTest_UnityView_Comp BannerAd_Load Click!");
-    UnityAdsModule.Instance.BannerAd_Load(AdPosition.Bottom, (issucc) =>
-     {
-       WriteLog("AdvTest_UnityView_Comp BannerAd_Load 加载回调:" + issucc.ToString());
-       updatebutt();
-     });
+    UnityAdsModule.Instance.BannerAd_Load(AdPosition.Bottom);
   }
   private void BannerAd_Show()
   {
@@ -67,11 +75,7 @@ public class AdvTest_UnityView_Comp : Model_BaseViewComp<AdvTestModule>
   private void InterstitialAd_Load()
   {
     WriteLog("AdvTest_UnityView_Comp InterstitialAd_Load Click!");
-    UnityAdsModule.Instance.Intersitial_Load((issucc) =>
-    {
-      WriteLog("AdvTest_UnityView_Comp InterstitialAd_Load 加载回调:" + issucc.ToString());
-      updatebutt();
-    });
+    UnityAdsModule.Instance.Intersitial_Load();
   }
   private void InterstitialAd_Show()
   {
@@ -86,20 +90,12 @@ public class AdvTest_UnityView_Comp : Model_BaseViewComp<AdvTestModule>
   private void RewardedAd_Load()
   {
     WriteLog("AdvTest_UnityView_Comp RewardedAd_Load Click!");
-    UnityAdsModule.Instance.Video_RewardedAd_Load((issucc) =>
-    {
-      WriteLog("AdvTest_UnityView_Comp RewardedAd_Load 加载回调:" + issucc.ToString());
-      updatebutt();
-    });
+    UnityAdsModule.Instance.Video_RewardedAd_Load();
   }
   private void RewardedAd_Show()
   {
     WriteLog("AdvTest_UnityView_Comp RewardedAd_Show Click!");
-    UnityAdsModule.Instance.Video_RewardedAd_Show((issucc) =>
-    {
-      WriteLog("AdvTest_UnityView_Comp RewardedAd_Show 奖励回调:" + issucc.ToString());
-      updatebutt();
-    });
+    UnityAdsModule.Instance.Video_RewardedAd_Show();
   }
   private void RewardedAd_Hide()
   {
