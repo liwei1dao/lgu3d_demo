@@ -43,6 +43,22 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
     LoadEnd();
   }
 
+  public override void Start(params object[] agr)
+  {
+    base.Start(agr);
+    MyModule.AdvManager_Comp.LoadEvent += AdvLoad;
+  }
+
+  public override void Show()
+  {
+    base.Show();
+    updatebutt();
+  }
+  private void AdvLoad(AdvType atype,bool isload){
+    WriteLog(string.Format("AdvTest_AdmobView_Comp AdvLoad AdvType:{0} isload:{1}",atype.ToString(),isload.ToString()));
+    updatebutt();
+  }
+
   private void AdmobClick()
   {
     MyModule.AdmobView_Comp.Show();
@@ -70,6 +86,7 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   {
     WriteLog("OpenAd_Hide Click!");
     MyModule.AdvManager_Comp.HideAdv(AdvType.AppOpenAd);
+    updatebutt();
   }
   private void BannerAd_Load()
   {
@@ -85,6 +102,7 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   {
     WriteLog("BannerAd_Hide Click!");
     MyModule.AdvManager_Comp.HideAdv(AdvType.BannerAd);
+    updatebutt();
   }
   private void InterstitialAd_Load()
   {
@@ -100,6 +118,7 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   {
     WriteLog("InterstitialAd_Hide Click!");
     MyModule.AdvManager_Comp.HideAdv(AdvType.IntersitialAd);
+    updatebutt();
   }
   private void RewardedAd_Load()
   {
@@ -109,12 +128,17 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   private void RewardedAd_Show()
   {
     WriteLog("RewardedAd_Show Click!");
-    MyModule.AdvManager_Comp.ShowRewardedAdv(AdvType.Video_RewardedAd, (advtype, succ) => { });
+    MyModule.AdvManager_Comp.ShowRewardedAdv(AdvType.Video_RewardedAd, (atype,issucc) =>
+     {
+        WriteLog(string.Format("AdvTest_HomeView_Comp RewardedAd_Show AdvType:{0} isload:{1}",atype.ToString(),issucc.ToString()));
+        updatebutt();
+     });
   }
   private void RewardedAd_Hide()
   {
     WriteLog("RewardedAd_Hide Click!");
     MyModule.AdvManager_Comp.HideAdv(AdvType.Video_RewardedAd);
+    updatebutt();
   }
 
   private void InterstitialRewardedAd_Load()
@@ -125,9 +149,9 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   private void InterstitialRewardedAd_Show()
   {
     WriteLog("InterstitialRewardedAd_Show Click!");
-    MyModule.AdvManager_Comp.ShowRewardedAdv(AdvType.IntersitialAd_RewardedAd, (advtype, issucc) =>
+    MyModule.AdvManager_Comp.ShowRewardedAdv(AdvType.IntersitialAd_RewardedAd, (atype,issucc) =>
      {
-       WriteLog("InterstitialRewardedAd_Show:" + issucc.ToString());
+      WriteLog(string.Format("AdvTest_HomeView_Comp InterstitialRewardedAd_Show AdvType:{0} isload:{1}",atype.ToString(),issucc.ToString()));
        updatebutt();
      });
   }
@@ -135,6 +159,7 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   {
     WriteLog("InterstitialRewardedAd_Hide Click!");
     MyModule.AdvManager_Comp.HideAdv(AdvType.IntersitialAd_RewardedAd);
+    updatebutt();
   }
 
   private void WriteLog(string msg)

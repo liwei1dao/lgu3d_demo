@@ -45,7 +45,19 @@ public class AdvTest_AdmobView_Comp : Model_BaseViewComp<AdvTestModule>
   {
     base.Start(agr);
     AdmobModule.Instance.logEvent = WriteLog;
+    AdmobModule.Instance.LoadEvent += AdvLoad;
+    AdmobModule.Instance.RewardEvent += AdvReward;
   }
+
+  private void AdvLoad(AdvType atype,bool isload){
+    WriteLog(string.Format("AdvTest_AdmobView_Comp AdvLoad AdvType:{0} isload:{1}",atype.ToString(),isload.ToString()));
+    updatebutt();
+  }
+  private void AdvReward(AdvType atype,bool isload){
+    WriteLog(string.Format("AdvTest_AdmobView_Comp AdvReward AdvType:{0} isload:{1}",atype.ToString(),isload.ToString()));
+    updatebutt();
+  }
+
   public override void Show()
   {
     base.Show();

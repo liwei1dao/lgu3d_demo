@@ -36,12 +36,24 @@ public class AdvTest_VungleView_Comp : Model_BaseViewComp<AdvTestModule>
   {
     base.Start(agr);
     VungleAdvModule.Instance.logEvent = WriteLog;
+    VungleAdvModule.Instance.LoadEvent += AdvLoad;
+    VungleAdvModule.Instance.RewardEvent += AdvReward;
   }
   public override void Show()
   {
     base.Show();
     updatebutt();
   }
+
+  private void AdvLoad(AdvType atype,bool isload){
+    WriteLog(string.Format("AdvTest_VungleView_Comp AdvLoad AdvType:{0} isload:{1}",atype.ToString(),isload.ToString()));
+    updatebutt();
+  }
+  private void AdvReward(AdvType atype,bool isload){
+    WriteLog(string.Format("AdvTest_VungleView_Comp AdvReward AdvType:{0} isload:{1}",atype.ToString(),isload.ToString()));
+    updatebutt();
+  }
+
   private void BannerAd_Load()
   {
     WriteLog("AdvTest_VungleView_Comp BannerAd_Load Click!");

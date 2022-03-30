@@ -37,6 +37,8 @@ public class AdvTest_UnityView_Comp : Model_BaseViewComp<AdvTestModule>
     base.Start(agr);
     WriteLog("Start UnityAdvModule!");
     UnityAdsModule.Instance.logEvent = WriteLog;
+    UnityAdsModule.Instance.LoadEvent += AdvLoad;
+    UnityAdsModule.Instance.RewardEvent += AdvReward;
   }
 
   public override void Show()
@@ -44,6 +46,16 @@ public class AdvTest_UnityView_Comp : Model_BaseViewComp<AdvTestModule>
     base.Show();
     updatebutt();
   }
+
+  private void AdvLoad(AdvType atype,bool isload){
+    WriteLog(string.Format("AdvTest_UnityView_Comp AdvLoad AdvType:{0} isload:{1}",atype.ToString(),isload.ToString()));
+    updatebutt();
+  }
+  private void AdvReward(AdvType atype,bool isload){
+    WriteLog(string.Format("AdvTest_UnityView_Comp AdvReward AdvType:{0} isload:{1}",atype.ToString(),isload.ToString()));
+    updatebutt();
+  }
+
 
   private void BannerAd_Load()
   {
