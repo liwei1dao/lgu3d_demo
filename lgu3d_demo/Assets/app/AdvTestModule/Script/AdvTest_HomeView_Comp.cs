@@ -59,11 +59,7 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   private void OpenAd_Load()
   {
     WriteLog("BannerAd_Load Click!");
-    MyModule.AdvManager_Comp.LoadAdv(AdvType.AppOpenAd, AdPosition.Bottom, (issucc) =>
-      {
-        WriteLog("OpenAd_Load:" + issucc.ToString());
-        updatebutt();
-      });
+    MyModule.AdvManager_Comp.LoadAdv(AdvType.AppOpenAd, AdPosition.Bottom);
   }
   private void OpenAd_Show()
   {
@@ -78,11 +74,7 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   private void BannerAd_Load()
   {
     WriteLog("BannerAd_Load Click!");
-    MyModule.AdvManager_Comp.LoadAdv(AdvType.BannerAd, AdPosition.Bottom, (issucc) =>
-    {
-      WriteLog("BannerAd_Load:" + issucc.ToString());
-      updatebutt();
-    });
+    MyModule.AdvManager_Comp.LoadAdv(AdvType.BannerAd, AdPosition.Bottom);
   }
   private void BannerAd_Show()
   {
@@ -97,11 +89,7 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   private void InterstitialAd_Load()
   {
     WriteLog("InterstitialAd_Load Click!");
-    MyModule.AdvManager_Comp.LoadAdv(AdvType.IntersitialAd, AdPosition.Bottom, (issucc) =>
-      {
-        WriteLog("InterstitialAd_Load:" + issucc.ToString());
-        updatebutt();
-      });
+    MyModule.AdvManager_Comp.LoadAdv(AdvType.IntersitialAd, AdPosition.Bottom);
   }
   private void InterstitialAd_Show()
   {
@@ -116,20 +104,12 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   private void RewardedAd_Load()
   {
     WriteLog("RewardedAd_Load Click!");
-    MyModule.AdvManager_Comp.LoadAdv(AdvType.Video_RewardedAd, AdPosition.Bottom, (issucc) =>
-   {
-     WriteLog("RewardedAd_Load:" + issucc.ToString());
-     updatebutt();
-   });
+    MyModule.AdvManager_Comp.LoadAdv(AdvType.Video_RewardedAd, AdPosition.Bottom);
   }
   private void RewardedAd_Show()
   {
     WriteLog("RewardedAd_Show Click!");
-    MyModule.AdvManager_Comp.ShowRewardedAdv(AdvType.Video_RewardedAd, (issucc) =>
-     {
-       WriteLog("RewardedAd_Show:" + issucc.ToString());
-       updatebutt();
-     });
+    MyModule.AdvManager_Comp.ShowRewardedAdv(AdvType.Video_RewardedAd, (advtype, succ) => { });
   }
   private void RewardedAd_Hide()
   {
@@ -140,16 +120,12 @@ public class AdvTest_HomeView_Comp : Model_BaseViewComp<AdvTestModule>
   private void InterstitialRewardedAd_Load()
   {
     WriteLog("InterstitialRewardedAd_Load Click!");
-    MyModule.AdvManager_Comp.LoadAdv(AdvType.IntersitialAd_RewardedAd, AdPosition.Bottom, (issucc) =>
-    {
-      WriteLog("InterstitialRewardedAd_Load:" + issucc.ToString());
-      updatebutt();
-    });
+    MyModule.AdvManager_Comp.LoadAdv(AdvType.IntersitialAd_RewardedAd, AdPosition.Bottom);
   }
   private void InterstitialRewardedAd_Show()
   {
     WriteLog("InterstitialRewardedAd_Show Click!");
-    MyModule.AdvManager_Comp.ShowRewardedAdv(AdvType.IntersitialAd_RewardedAd, (issucc) =>
+    MyModule.AdvManager_Comp.ShowRewardedAdv(AdvType.IntersitialAd_RewardedAd, (advtype, issucc) =>
      {
        WriteLog("InterstitialRewardedAd_Show:" + issucc.ToString());
        updatebutt();

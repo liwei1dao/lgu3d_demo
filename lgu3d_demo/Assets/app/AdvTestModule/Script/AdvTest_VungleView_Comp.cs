@@ -45,11 +45,7 @@ public class AdvTest_VungleView_Comp : Model_BaseViewComp<AdvTestModule>
   private void BannerAd_Load()
   {
     WriteLog("AdvTest_VungleView_Comp BannerAd_Load Click!");
-    VungleAdvModule.Instance.BannerAd_Load(AdPosition.Bottom, (issucc) =>
-     {
-       WriteLog("AdvTest_VungleView_Comp BannerAd_Load 加载回调" + issucc.ToString());
-       updatebutt();
-     });
+    VungleAdvModule.Instance.BannerAd_Load(AdPosition.Bottom);
   }
   private void BannerAd_Show()
   {
@@ -64,11 +60,7 @@ public class AdvTest_VungleView_Comp : Model_BaseViewComp<AdvTestModule>
   private void InterstitialAd_Load()
   {
     WriteLog("AdvTest_VungleView_Comp InterstitialAd_Load Click!");
-    VungleAdvModule.Instance.Intersitial_Load((issucc) =>
-    {
-      WriteLog("AdvTest_VungleView_Comp Intersitial_Load 加载回调" + issucc.ToString());
-      updatebutt();
-    });
+    VungleAdvModule.Instance.Intersitial_Load();
   }
   private void InterstitialAd_Show()
   {
@@ -83,19 +75,12 @@ public class AdvTest_VungleView_Comp : Model_BaseViewComp<AdvTestModule>
   private void RewardedAd_Load()
   {
     WriteLog("AdvTest_VungleView_Comp RewardedAd_Load Click!");
-    VungleAdvModule.Instance.Video_RewardedAd_Load((issucc) =>
-    {
-      WriteLog("AdvTest_VungleView_Comp RewardedAd_Load  加载回调" + issucc.ToString());
-      updatebutt();
-    });
+    VungleAdvModule.Instance.Video_RewardedAd_Load();
   }
   private void RewardedAd_Show()
   {
     WriteLog("AdvTest_VungleView_Comp RewardedAd_Show Click!");
-    VungleAdvModule.Instance.Video_RewardedAd_Show((issucc) =>
-    {
-      WriteLog("AdvTest_VungleView_Comp 奖励回调:" + issucc.ToString());
-    });
+    VungleAdvModule.Instance.Video_RewardedAd_Show();
   }
   private void RewardedAd_Hide()
   {

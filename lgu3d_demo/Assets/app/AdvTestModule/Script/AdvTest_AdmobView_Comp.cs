@@ -54,11 +54,7 @@ public class AdvTest_AdmobView_Comp : Model_BaseViewComp<AdvTestModule>
   private void OpenAd_Load()
   {
     WriteLog("AdvTest_AdmobView_Comp BannerAd_Load Click!");
-    AdmobModule.Instance.OpenAd_Load((issucc) =>
-    {
-      WriteLog("AdvTest_AdmobView_Comp OpenAd_Load 加载回调:" + issucc.ToString());
-      updatebutt();
-    });
+    AdmobModule.Instance.OpenAd_Load();
   }
   private void OpenAd_Show()
   {
@@ -73,11 +69,7 @@ public class AdvTest_AdmobView_Comp : Model_BaseViewComp<AdvTestModule>
   private void BannerAd_Load()
   {
     WriteLog("AdvTest_AdmobView_Comp BannerAd_Load Click!");
-    AdmobModule.Instance.BannerAd_Load(AdPosition.Bottom, (issucc) =>
-     {
-       WriteLog("AdvTest_AdmobView_Comp BannerAd_Load 加载回调:" + issucc.ToString());
-       updatebutt();
-     });
+    AdmobModule.Instance.BannerAd_Load(AdPosition.Bottom);
   }
   private void BannerAd_Show()
   {
@@ -92,11 +84,7 @@ public class AdvTest_AdmobView_Comp : Model_BaseViewComp<AdvTestModule>
   private void InterstitialAd_Load()
   {
     WriteLog("AdvTest_AdmobView_Comp InterstitialAd_Load Click!");
-    AdmobModule.Instance.Intersitial_Load((issucc) =>
-    {
-      WriteLog("AdvTest_AdmobView_Comp InterstitialAd_Load 加载回调:" + issucc.ToString());
-      updatebutt();
-    });
+    AdmobModule.Instance.Intersitial_Load();
   }
   private void InterstitialAd_Show()
   {
@@ -111,20 +99,12 @@ public class AdvTest_AdmobView_Comp : Model_BaseViewComp<AdvTestModule>
   private void RewardedAd_Load()
   {
     WriteLog("AdvTest_AdmobView_Comp RewardedAd_Load Click!");
-    AdmobModule.Instance.Video_RewardedAd_Load((issucc) =>
-    {
-      WriteLog("AdvTest_AdmobView_Comp RewardedAd_Load 加载回调:" + issucc.ToString());
-      updatebutt();
-    });
+    AdmobModule.Instance.Video_RewardedAd_Load();
   }
   private void RewardedAd_Show()
   {
     WriteLog("AdvTest_AdmobView_Comp RewardedAd_Show Click!");
-    AdmobModule.Instance.Video_RewardedAd_Show((issucc) =>
-    {
-      WriteLog("AdvTest_AdmobView_Comp RewardedAd_Show 奖励回调:" + issucc.ToString());
-      updatebutt();
-    });
+    AdmobModule.Instance.Video_RewardedAd_Show();
   }
   private void RewardedAd_Hide()
   {
@@ -135,20 +115,12 @@ public class AdvTest_AdmobView_Comp : Model_BaseViewComp<AdvTestModule>
   private void InterstitialRewardedAd_Load()
   {
     WriteLog("AdvTest_AdmobView_Comp RewardedAd_Load Click!");
-    AdmobModule.Instance.Interstitial_RewardedAd_Load((issucc) =>
-    {
-      WriteLog("AdvTest_AdmobView_Comp RewardedAd_Load 加载回调:" + issucc.ToString());
-      updatebutt();
-    });
+    AdmobModule.Instance.Interstitial_RewardedAd_Load();
   }
   private void InterstitialRewardedAd_Show()
   {
     WriteLog("AdvTest_AdmobView_Comp RewardedAd_Show Click!");
-    AdmobModule.Instance.Interstitial_RewardedAd_Show((issucc) =>
-    {
-      WriteLog("AdvTest_AdmobView_Comp RewardedAd_Show 奖励回调:" + issucc.ToString());
-      updatebutt();
-    });
+    AdmobModule.Instance.Interstitial_RewardedAd_Show();
   }
   private void InterstitialRewardedAd_Hide()
   {

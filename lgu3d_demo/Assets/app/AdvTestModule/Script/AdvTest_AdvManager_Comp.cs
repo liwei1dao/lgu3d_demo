@@ -14,11 +14,7 @@ public class AdvTest_AdvManager_Comp : Module_AdvManager_Comp<AdvTestModule>
     #region AdmobModule
     Manager_ManagerModel.Instance.StartModule<AdmobModule>((module) =>
     {
-      module.Initialize((isucc) =>
-      {
-        Debug.Log("Start AdmobModule:" + isucc.ToString());
-        AddAdv(AdmobModule.Instance);
-      });
+      module.Initialize();
     }, new Dictionary<AdvType, string>()
         {
           #if UNITY_EDITOR || ADVTEST
@@ -45,11 +41,7 @@ public class AdvTest_AdvManager_Comp : Module_AdvManager_Comp<AdvTestModule>
     #region VungleAdvModule
     Manager_ManagerModel.Instance.StartModule<VungleAdvModule>((module) =>
     {
-      module.Initialize("5e15c0585ec4860017a38f46", true, (isucc) =>
-      {
-        Debug.Log("Start VungleAdvModule:" + isucc.ToString());
-        AddAdv(VungleAdvModule.Instance);
-      });
+      module.Initialize("5e15c0585ec4860017a38f46", true);
     }, new Dictionary<AdvType, string>()
         {
         #if UNITY_EDITOR || ADVTEST
@@ -76,11 +68,7 @@ public class AdvTest_AdvManager_Comp : Module_AdvManager_Comp<AdvTestModule>
     #region UnityAdsModule
     Manager_ManagerModel.Instance.StartModule<UnityAdsModule>((module) =>
     {
-      module.Initialize("4628697", true, (isucc) =>
-      {
-        Debug.Log("Start UnityAdsModule:" + isucc.ToString());
-        AddAdv(UnityAdsModule.Instance);
-      });
+      module.Initialize("4628697", true);
     }, new Dictionary<AdvType, string>()
         {
       #if UNITY_EDITOR || ADVTEST

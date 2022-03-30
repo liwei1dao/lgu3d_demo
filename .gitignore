@@ -67,6 +67,8 @@ crashlytics-build.properties
 *.DS_Store
 */Assets/ExternalDependencyManager/
 */Assets/ExternalDependencyManager.meta
+*/Assets/app/AdvTestModule/*
+!*/Assets/app/AdvTestModule/AdvTestModule.unitypackage
 # */Assets/GoogleMobileAds/
 # */Assets/GoogleMobileAds.meta
 # */Assets/Plugins/
