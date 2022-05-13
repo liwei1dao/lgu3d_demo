@@ -13,6 +13,7 @@ public class EliminateModule : ManagerContorBase<EliminateModule>
   public Eliminate_SceneChanageView_Comp SceneChanageView_Comp;
   public override void Load(params object[] agrs)
   {
+    GameObjectPool_Comp = AddComp<Module_GameObjectPool_Comp>();
     ResourceComp = AddComp<Module_ResourceComp>();
     TimerComp = AddComp<Module_TimerComp>();
     CoroutineComp = AddComp<Module_CoroutineComp>();
