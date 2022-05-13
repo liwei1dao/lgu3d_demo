@@ -10,7 +10,10 @@ public class Eliminate_GameScene_Comp : Module_BaseSceneComp<EliminateModule>
 {
   private Transform[] puts;
   private GameObject candyTrans;
+  private GameObject launchTrans;
+  private GameObject launcher;
   public List<Candy> bubbleList = new List<Candy>();
+  public Candy waitLaunch;
   public bool isCanClick = true;
   const string objpool = "candy";
   public override void Load(ModelBase module, params object[] agrs)
@@ -24,6 +27,8 @@ public class Eliminate_GameScene_Comp : Module_BaseSceneComp<EliminateModule>
   {
     Process = 1;
     candyTrans = GameObject.Find("Scene/candyTrans");
+    launcher = GameObject.Find("Scene/Launch/Launcher");
+    launchTrans = GameObject.Find("Scene/Launch/Launcher/launchTrans");
     GameObject _puts = GameObject.Find("Scene/puts");
     puts = new Transform[_puts.transform.childCount];
     for (var i = 0; i < _puts.transform.childCount; i++)
@@ -57,11 +62,12 @@ public class Eliminate_GameScene_Comp : Module_BaseSceneComp<EliminateModule>
       tempos.RemoveAt(index);
     }
     yield return new WaitForSeconds(1);
+    FillingCandy();
   }
 
   private string RandomCandyType()
   {
-    string[] ctypes = new string[] { "item_001", "item_002", "item_003" };
+    string[] ctypes = new string[] { "item_001", "item_002", "item_003", "item_004", "item_005", "item_006" };
     return ctypes[Random.Range(0, ctypes.Length)];
   }
 
@@ -74,6 +80,12 @@ public class Eliminate_GameScene_Comp : Module_BaseSceneComp<EliminateModule>
     return candy;
   }
 
+  public void KnobLauncher(float knob)
+  {
+    launcher.transform.localRotation = Quaternion.Euler(new Vector3(0, knob, 0));
+  }
+
+
   /// <summary>
   /// 消除
   /// </summary>
@@ -82,6 +94,7 @@ public class Eliminate_GameScene_Comp : Module_BaseSceneComp<EliminateModule>
   {
     Vector3 candyPos = candy.transform.localPosition;
     List<Candy> linkList = GetLinkBubble(candy);
+    MyModule.StartCoroutine(IECleanBubble(linkList));
   }
 
   IEnumerator IECleanBubble(List<Candy> linkList)
@@ -171,8 +184,9 @@ public class Eliminate_GameScene_Comp : Module_BaseSceneComp<EliminateModule>
 
     float radiusA = a.bubCollider.radius;
     float radiusB = b.bubCollider.radius;
-    float offset = 5f;
+    float offset = 0.2f;
     float calDistance = radiusA + radiusB + offset;
+    Debug.Log("calDistance:" + calDistance + " distance:" + distance);
     if (calDistance >= distance)
     {
       return true;
@@ -201,6 +215,24 @@ public class Eliminate_GameScene_Comp : Module_BaseSceneComp<EliminateModule>
     bubbleList.Remove(bubble);
     bubble.Hide();
     MyModule.PushByDictionaryPool<Candy>(objpool, bubble.CType, bubble);
+  }
+
+
+  public void FillingCandy()
+  {
+    waitLaunch = MyModule.GetByDictionaryPool<Candy>(objpool, RandomCandyType());
+    waitLaunch.rbody.isKinematic = true;
+    waitLaunch.transform.position = launchTrans.transform.position;
+  }
+
+  public void LaunchCandy()
+  {
+    if (waitLaunch != null)
+    {
+      bubbleList.Add(waitLaunch);
+      waitLaunch.rbody.isKinematic = false;
+      waitLaunch.AddForces(launchTrans.transform.forward * 10);
+    }
   }
 
 }

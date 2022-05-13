@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1768036388275702200}
   - component: {fileID: 6030691608075578833}
   m_Layer: 0
-  m_Name: item_003
+  m_Name: item_005
   m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 71892691d0390d94f8e2e6639d5e2043, type: 2}
+  - {fileID: 2100000, guid: df79dc686f0c5b341b2b0a27f9da0dbb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
