@@ -1,8 +1,7 @@
-
 using lgu3d;
 
 
-public class AdvTest_SceneChanageView_Comp : Model_BaseViewComp<AdvTestModule>, IScenesChedulerBase
+public class Eliminate_SceneChanageView_Comp : Model_BaseViewComp<EliminateModule>, IScenesChedulerBase
 {
 
   public override void Load(ModelBase module, params object[] agrs)
