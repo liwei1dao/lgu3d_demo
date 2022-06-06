@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: 953edb5b4e549154192f9317b267f591
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3834774290764866031
+    second: 01_Minimalist_Tension_0
+  - first:
+      213: 1595362050890138302
+    second: 01_Minimalist_Tension_1
+  - first:
+      213: 222140965590325358
+    second: 01_Minimalist_Tension_2
+  - first:
+      213: -3109208486425262532
+    second: 01_Minimalist_Tension_3
+  - first:
+      213: -4245542343601671178
+    second: 01_Minimalist_Tension_4
+  - first:
+      213: 1160113919604913717
+    second: 01_Minimalist_Tension_5
+  - first:
+      213: 4346010624686588088
+    second: 01_Minimalist_Tension_6
+  - first:
+      213: 7006420556440463786
+    second: 01_Minimalist_Tension_7
+  - first:
+      213: 2223635065076991204
+    second: 01_Minimalist_Tension_8
+  - first:
+      213: -3312530863643461339
+    second: 01_Minimalist_Tension_9
+  - first:
+      213: -8600000598987098803
+    second: 01_Minimalist_Tension_10
+  - first:
+      213: 3854005639572064201
+    second: 01_Minimalist_Tension_11
+  - first:
+      213: -6128256336474300865
+    second: 01_Minimalist_Tension_12
+  - first:
+      213: 5146053689715437410
+    second: 01_Minimalist_Tension_13
+  - first:
+      213: 1887029250637195908
+    second: 01_Minimalist_Tension_14
+  - first:
+      213: -5984911461023329125
+    second: 01_Minimalist_Tension_15
+  - first:
+      213: 3741725879568893287
+    second: 01_Minimalist_Tension_16
+  - first:
+      213: 7467325334091601090
+    second: 01_Minimalist_Tension_17
+  - first:
+      213: -1987835452308716970
+    second: 01_Minimalist_Tension_18
+  - first:
+      213: 2742659203624845573
+    second: 01_Minimalist_Tension_19
+  - first:
+      213: 1107880175012043191
+    second: 01_Minimalist_Tension_20
+  - first:
+      213: 187892481425587494
+    second: 01_Minimalist_Tension_21
+  - first:
+      213: 6960500515257437155
+    second: 01_Minimalist_Tension_22
+  - first:
+      213: 2775440570196904081
+    second: 01_Minimalist_Tension_23
+  - first:
+      213: -1586660752598283044
+    second: 01_Minimalist_Tension_24
+  - first:
+      213: 5154715408555872491
+    second: 01_Minimalist_Tension_25
+  - first:
+      213: 7071847870919395452
+    second: 01_Minimalist_Tension_26
+  - first:
+      213: 8134221129563403344
+    second: 01_Minimalist_Tension_27
+  - first:
+      213: 3985618688636820756
+    second: 01_Minimalist_Tension_28
+  - first:
+      213: 5040482949464896352
+    second: 01_Minimalist_Tension_29
+  - first:
+      213: -3751158062610273232
+    second: 01_Minimalist_Tension_30
+  - first:
+      213: -1217824580522319473
+    second: 01_Minimalist_Tension_31
+  - first:
+      213: -2543861870456699133
+    second: 01_Minimalist_Tension_32
+  - first:
+      213: -5322279916792265669
+    second: 01_Minimalist_Tension_33
+  - first:
+      213: 8564768437758740959
+    second: 01_Minimalist_Tension_34
+  - first:
+      213: -4090351627432212578
+    second: 01_Minimalist_Tension_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 01_Minimalist_Tension_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 341
+        width: 80
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ed82d991528cac0800000000000000
+      internalID: -3834774290764866031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_Minimalist_Tension_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 219
+        width: 80
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2027b255dd32610800000000000000
+      internalID: 1595362050890138302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_Minimalist_Tension_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 60
+        width: 41
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68d2100804351300800000000000000
+      internalID: 222140965590325358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_Minimalist_Tension_3
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 60
+        width: 41
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c360ef9da5fd9d4d0800000000000000
+      internalID: -3109208486425262532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -184, y: -99}
+      - {x: -184, y: -101}
+      - {x: -143, y: -142}
+      - {x: -139, y: -142}
+      - {x: -139, y: -58}
+      - {x: -143, y: -58}
+    - - {x: 144, y: -59}
+      - {x: 138, y: -59}
+      - {x: 138, y: -142}
+      - {x: 146, y: -142}
+      - {x: 152, y: -138}
+      - {x: 183, y: -101}
+      - {x: 183, y: -95}
+    - - {x: 140, y: 62}
+      - {x: 134, y: 60}
+      - {x: 88, y: 62}
+      - {x: 58, y: 62}
+      - {x: 58, y: 54}
+      - {x: 96, y: 17}
+      - {x: 102, y: 17}
+      - {x: 142, y: 57}
+      - {x: 142, y: 60}
+    - - {x: -101, y: 184}
+      - {x: -142, y: 143}
+      - {x: -142, y: 139}
+      - {x: -58, y: 139}
+      - {x: -58, y: 143}
+      - {x: -98, y: 184}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

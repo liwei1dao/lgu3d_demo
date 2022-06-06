@@ -4,7 +4,9 @@ using lgu3d;
 using UnityEngine;
 
 /// <summary>
-/// 消除游戏测试模块
+/// 糖果屋
+/// 3d糖果消消乐
+/// 合成特殊糖果 完成通关奖励
 /// </summary>
 public class EliminateModule : ManagerContorBase<EliminateModule>
 {

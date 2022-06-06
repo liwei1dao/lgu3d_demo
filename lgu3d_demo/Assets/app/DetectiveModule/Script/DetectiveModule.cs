@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using lgu3d;
 
-public class DetectiveModule : MonoBehaviour
+/// <summary>
+/// 西部探长
+/// 抢手对决 谁才是整整的快枪手
+/// </summary>using System.Collections;
+public class DetectiveModule : ManagerContorBase<DetectiveModule>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  public override void Load(params object[] agrs)
+  {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  }
 }
